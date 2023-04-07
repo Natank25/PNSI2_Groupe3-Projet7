@@ -1,0 +1,45 @@
+h1 {
+    animation-duration: 3s;
+    animation-name: arrivee_titre;
+    margin: 2%;
+    font-size: 250%;
+  }
+  
+  @keyframes arrivee_titre {
+    from {
+      margin-left: 15%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 2%;
+      width: 100%;
+    }
+
+  }
+  
+h1:hover {
+    transform: scale(1.2);
+    transform-origin: left;
+  }
+
+.bandereau {
+  background-color: rgb(255, 153, 0);
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  right: 0%;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: white;
+  cursor: pointer;
+}
