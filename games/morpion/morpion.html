@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
     <title>Jeux gratuits - Accueil</title>
-    <link href="style.css" rel="stylesheet">
-    <script src="script.js"></script>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="snake.js"></script>
+    <script src="../../script.js"></script>
 </head>
 
 <body>
     <div class="top_panel">
         <div class="img_nav_conatiner">
-            <img src="palmiers.jpg" class="img_titre">
+            <img src="../../palmiers.jpg" class="img_titre">
             <nav class="navbar">
                 <ul>
                     <li class="menu-deroulant">
@@ -42,20 +44,24 @@
                     <li class="menu-deroulant">
                         <a>Divers</a>
                         <ul class="sous-menu">
-                            <li><a href="remerciements.html">Remerciements</a></li>
-                            <li><a href="credits.html">Credits</a></li>
+                            <li><a href="../../remerciements.html">Remerciements</a></li>
+                            <li><a href="../../credits.html">Credits</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
         </div>
         <div class="txt_title">
-            <h1 id="text_titre"><a href="index.html">Jeux gratuits</a></h1>
+            <h1 id="text_titre"><a href="../../index.html">Jeux gratuits</a></h1>
         </div>
     </div>
 
     <div class="container">
-        
+        <svg width="450" height="550" class="svg_playground">
+            <rect width="450" height="550" rx="20" ry="20" class="playground"></rect>
+            <rect width="400" height="400"  y="25" x="25" rx="20" ry="20" class="main_game" stroke="#004000" stroke-width="4"></rect>
+            
+        </svg>
     </div>
 </body>
 

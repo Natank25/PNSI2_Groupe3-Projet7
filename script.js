@@ -34,7 +34,7 @@ window.addEventListener('load', function () {
     const imgHeight = img.offsetHeight;
     const imgOffsetTop = img.offsetTop;
     const container = document.querySelector('.container');
-    container.style.marginTop = `${imgOffsetTop + imgHeight+ 25}px`;
+    container.style.marginTop = `${(imgOffsetTop + imgHeight)/100 + 17 }%`;
 
     
     let titre_x = imgHeight/10;

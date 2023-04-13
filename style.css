@@ -20,7 +20,9 @@ h1 {
 }
 
 .container {
-  margin-top: 200px;
+  text-align: center;
+  margin: auto;
+
 }
 
 @keyframes arrivee_titre {
@@ -32,8 +34,6 @@ h1 {
     top: var(--titre_place,0px);
   }
 }
-
-
 
 a {
   outline: none;
@@ -54,6 +54,46 @@ a:hover {
   height: auto;
 }
 
+/*partie du footer (bas de screen)*/
+
+footer {
+  background-color: #282A35;
+  color: #fff;
+  margin-top: 50px;
+  box-sizing: content-box;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer_big_links {
+  font-size: 150%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.footer_big_links:hover {
+  text-decoration: underline;
+  color: #2169EC
+}
+
+.footer_links {
+  font-size: 110%;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+.footer_links:hover {
+  text-decoration: underline;
+  color: #2169EC
+}
+
+.footers_big_texts {
+  font-size: 125%;
+  margin-left: 2%;
+  padding-right: 5%
+}
 
 /*partie specifique (SEULEMENT) credits.html*/
 
@@ -82,8 +122,6 @@ a:hover {
   padding-left: 80px;
   padding-right: 80px;
 }
-
-
 
 #customers tr:nth-child(even) {
   background-color: #f2f2f2;
@@ -217,4 +255,18 @@ h2 {
 
 mark {
   background-color: rgb(255, 255, 81);
+}
+
+/* Partie des jeux en général */
+
+.playground {
+  fill: rgb(12,80,12);
+}
+
+.main_game {
+  fill: rgb(8,92,8);
+}
+
+.svg_playground {
+  margin-top: 5%;
 }
