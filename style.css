@@ -2,40 +2,43 @@
 h1 {
   animation-name: arrivee_titre;
   animation-duration: 3s;
-  font-size: 400%;
-  transition: 0.25s all ease-in-out;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+  font-size: 4vw;
   position: absolute;
   text-align: center;
 }
 
 .txt_title {
+  left: 0;
+  top: 0;
+  width: 100%;
+  position: absolute;
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  height: 11vh;
 }
 
+.container {
+  margin-top: 200px;
+}
 
 @keyframes arrivee_titre {
   from {
-    top: -500px;
+    top: -125px;
   }
 
   to {
-    top: 0px;
+    top: var(--titre_place,0px);
   }
-
 }
 
-h1:hover {
-  transform: scale(1.1);
-}
 
 
 a {
   outline: none;
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 a:hover {
@@ -47,6 +50,8 @@ a:hover {
   position: absolute;
   top: 0;
   left: 0;
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -96,13 +101,13 @@ nav * {
   font-family: Montserrat, sans-serif;
 }
 
-nav {
-  left: 0%;
-  top: 23%;
+.navbar {
   width: 100%;
+  bottom: 0;
+  left: 0;
   font-size: 18px;
   background-color: rgb(255, 255, 255);
-  position: absolute;
+  position: relative;
 }
 
 nav>ul {
@@ -204,4 +209,12 @@ nav>ul>li:hover>a {
 
 .menu-deroulant:hover>.sous-menu {
   animation: apparitionSousMenu 1s forwards;
+}
+
+h2 {
+  text-align: center;
+}
+
+mark {
+  background-color: rgb(255, 255, 81);
 }
