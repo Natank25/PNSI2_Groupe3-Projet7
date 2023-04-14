@@ -31,7 +31,7 @@ h1 {
   }
 
   to {
-    top: var(--titre_place,0px);
+    top: var(--titre_place, 0px);
   }
 }
 
@@ -260,13 +260,45 @@ mark {
 /* Partie des jeux en général */
 
 .playground {
-  fill: rgb(12,80,12);
+  fill: rgb(12, 80, 12);
 }
 
 .main_game {
-  fill: rgb(8,92,8);
+  fill: rgb(8, 92, 8);
 }
 
 .svg_playground {
-  margin-top: 5%;
+  margin-top: -3%;
+}
+
+#p1 {
+  fill: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, Courier, monospace;
+  font-size: xx-large;
+  user-select: none;
+  transition: 0.25s all ease-in-out;
+}
+
+#p2 {
+  fill: white;
+  opacity: 50%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif, Courier, monospace;
+  font-size: xx-large;
+  transition: 0.25s all ease-in-out;
+  user-select: none;
+}
+
+#text_replay {
+  fill: white;
+  user-select: none;
+  font-size: 175%;
+
+}
+
+#panel_replay:hover {
+  cursor: pointer
+}
+
+#text_replay:hover {
+  cursor: pointer
 }

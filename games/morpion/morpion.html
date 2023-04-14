@@ -8,7 +8,7 @@
     <link rel="icon" href="icon.png">
     <title>Jeux gratuits - Accueil</title>
     <link href="../../style.css" rel="stylesheet">
-    <script src="snake.js"></script>
+    <script src="morpion.js"></script>
     <script src="../../script.js"></script>
 </head>
 
@@ -57,11 +57,41 @@
     </div>
 
     <div class="container">
-        <svg width="450" height="550" class="svg_playground">
+        <svg width="450" height="610" class="svg_playground">
             <rect width="450" height="550" rx="20" ry="20" class="playground"></rect>
-            <rect width="400" height="400"  y="25" x="25" rx="20" ry="20" class="main_game" stroke="#004000" stroke-width="4"></rect>
-            
+            <rect width="400" height="400" y="25" x="25" rx="20" ry="20" class="main_game" stroke="#004000"
+                stroke-width="4"></rect>
+
+            <!-- Morpion -->
+
+            <!-- Lignes du terrain -->
+            <line x1="160" y1="410" x2="160" y2="40" stroke="#252525" stroke-width="5" stroke-linecap="round"></line>
+            <line x1="290" y1="40" x2="290" y2="410" stroke="#252525" stroke-width="5" stroke-linecap="round"></line>
+
+            <line x1="410" y1="160" x2="40" y2="160" stroke="#252525" stroke-width="5" stroke-linecap="round"></line>
+            <line x1="40" y1="290" x2="410" y2="290" stroke="#252525" stroke-width="5" stroke-linecap="round"></line>
+
+            <!-- Cases pour cliquer-->
+            <rect id="haut_gauche" width="110" height="110" x="40" y="40" onclick="set_haut_gauche(this)"></rect>
+            <rect id="haut_milieu" width="110" height="110" x="170" y="40" onclick="set_haut_milieu(this)"></rect>
+            <rect id="haut_droit" width="110" height="110" x="300" y="40" onclick="set_haut_droit(this)"></rect>
+
+            <rect id="centre_gauche" width="110" height="110" x="40" y="170" onclick="set_centre_gauche(this)"></rect>
+            <rect id="centre_milieu" width="110" height="110" x="170" y="170" onclick="set_centre_milieu(this)"></rect>
+            <rect id="centre_droit" width="110" height="110" x="300" y="170" onclick="set_centre_droit(this)"></rect>
+
+            <rect id="bas_gauche" width="110" height="110" x="40" y="300" onclick="set_bas_gauche(this)"></rect>
+            <rect id="bas_milieu" width="110" height="110" x="170" y="300" onclick="set_bas_milieu(this)"></rect>
+            <rect id="bas_droit" width="110" height="110" x="300" y="300" onclick="set_bas_droit(this)"></rect>
+
+            <!-- Joueurs -->
+            <text id="p1" x="30" y="470">Joueur 1 (Croix)</text>
+            <text id="p2" x="30" y="520">Joueur 2 (Cercles)</text>
+
+            <rect id="panel_replay" x="162" y="555" width="125" height="50" rx="10" ry="10" onclick="replay()"></rect>
+            <text x="180" y="588" id="text_replay" onclick="replay()">Rejouer</text>
         </svg>
+
     </div>
 </body>
 
