@@ -280,10 +280,10 @@ function detect_win() {
             }
 
             var completion_line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-            completion_line.setAttribute("x1", parseInt(ligne[0].getAttribute("x"))+55)
-            completion_line.setAttribute("y1", parseInt(ligne[0].getAttribute("y"))+55)
-            completion_line.setAttribute("x2", parseInt(ligne[2].getAttribute("x"))+55)
-            completion_line.setAttribute("y2", parseInt(ligne[2].getAttribute("y"))+55)
+            completion_line.setAttribute("x1", parseInt(ligne[0].getAttribute("x")) + 55)
+            completion_line.setAttribute("y1", parseInt(ligne[0].getAttribute("y")) + 55)
+            completion_line.setAttribute("x2", parseInt(ligne[2].getAttribute("x")) + 55)
+            completion_line.setAttribute("y2", parseInt(ligne[2].getAttribute("y")) + 55)
             completion_line.setAttribute("stroke", 'gray')
             completion_line.setAttribute("stroke-width", "14");
             completion_line.setAttribute("stroke-linecap", "round");
@@ -311,7 +311,7 @@ function finish() {
 
 function replay() {
     swap_player()
-    
+
     haut_gauche.style.fill = ""
     haut_milieu.style.fill = ""
     haut_droit.style.fill = ""

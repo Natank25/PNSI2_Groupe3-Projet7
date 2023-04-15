@@ -2,7 +2,7 @@
 
 Groupe 3
 
-[Lien d'invitiation](https://prod.liveshare.vsengsaas.visualstudio.com/join?CC29AD5021419602D97A7342B10CB8B06E09 "Lien d'invitation")
+[Lien d'invitiation](https://prod.liveshare.vsengsaas.visualstudio.com/join?4921D0C855625A69E8DEF2ED0B2D275C80EE "Lien d'invitation")
 
  # Liens
 [Lycée] (http://172.20.11.152:5500)

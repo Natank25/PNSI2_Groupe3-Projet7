@@ -1,4 +1,8 @@
 /*partie index.html et GLOBALE*/
+body {
+  margin: 0;
+}
+
 h1 {
   animation-name: arrivee_titre;
   animation-duration: 3s;
@@ -7,13 +11,13 @@ h1 {
   font-size: 4vw;
   position: absolute;
   text-align: center;
+  user-select: none;
 }
 
 .txt_title {
   left: 0;
   top: 0;
   width: 100%;
-  position: absolute;
   display: flex;
   justify-content: center;
   height: 11vh;
@@ -22,7 +26,6 @@ h1 {
 .container {
   text-align: center;
   margin: auto;
-
 }
 
 @keyframes arrivee_titre {
@@ -54,6 +57,9 @@ a:hover {
   height: auto;
 }
 
+mark {
+  opacity: 0.7;
+}
 /*partie du footer (bas de screen)*/
 
 footer {
@@ -61,7 +67,6 @@ footer {
   color: #fff;
   margin-top: 50px;
   box-sizing: content-box;
-  position: absolute;
   left: 0;
   width: 100%;
   bottom: 0;
@@ -81,7 +86,7 @@ footer {
 .footer_links {
   font-size: 110%;
   margin-left: 2%;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .footer_links:hover {
@@ -92,7 +97,77 @@ footer {
 .footers_big_texts {
   font-size: 125%;
   margin-left: 2%;
-  padding-right: 5%
+  padding-right: 5%;
+}
+
+.footer_span {
+  margin-left: 18%;
+}
+
+.footer_links2-0 {
+  font-size: 110%;
+  margin-left: 20.7%;
+  margin-top: 5%;
+}
+
+.footer_links2-0:hover {
+  text-decoration: underline;
+  color: #2169EC
+}
+
+.footer_links2-1 {
+  font-size: 110%;
+  margin-left: 19.4%;
+  margin-top: 5%;
+}
+
+.footer_links2-1:hover {
+  text-decoration: underline;
+  color: #2169EC
+}
+
+.footer_links3-0 {
+  font-size: 110%;
+  margin-left: 18.2%;
+  margin-top: 5%;
+}
+
+.footer_links3-0:hover {
+  text-decoration: underline;
+  color: #2169EC
+}
+
+.footer_links3-1 {
+  font-size: 110%;
+  margin-left: 15.8%;
+  margin-top: 5%;
+}
+
+.footer_links3-1:hover {
+  text-decoration: underline;
+  color: #2169EC
+}
+
+.footer_links4-0 {
+  font-size: 110%;
+  margin-left: 18%;
+  margin-top: 5%;
+}
+
+.footer_links4-0:hover {
+  text-decoration: underline;
+  color: #2169EC
+}
+
+.footer_links4-1 {
+  font-size: 110%;
+  margin-left: 18%;
+  margin-top: 5%;
+}
+
+.footer_links4-1:hover {
+  text-decoration: underline;
+  color: #2169EC
 }
 
 /*partie specifique (SEULEMENT) credits.html*/
@@ -110,7 +185,6 @@ footer {
   vertical-align: middle;
   padding-top: 12px;
   padding-bottom: 12px;
-
   background-color: #1f98fc;
   color: white;
   text-align: center;
@@ -271,6 +345,7 @@ mark {
   margin-top: -3%;
 }
 
+/* Morpion */
 #p1 {
   fill: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif, Courier, monospace;
@@ -301,4 +376,29 @@ mark {
 
 #text_replay:hover {
   cursor: pointer
+}
+
+/* Memory */
+#game-board {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.memory_card {
+  width: 100px;
+  height: 150px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.memory_card img {
+  max-width: 100px;
+  max-height: 150px;
 }
