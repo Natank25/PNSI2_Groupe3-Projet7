@@ -60,6 +60,37 @@ a:hover {
 mark {
   opacity: 0.7;
 }
+
+.img_preview  {
+  width: 50%;
+  border-radius: 15px;
+}
+
+#tableau_jeux {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  text-align: center;
+  margin-top: 0;
+  font-size: 150%;
+
+}
+
+.selection {
+  border: 1px solid #ddd;
+  padding: 8px;
+  vertical-align: middle;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: #dcdcdc;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  font-size: 200%;
+
+}
+
+
 /*partie du footer (bas de screen)*/
 
 footer {
@@ -220,6 +251,7 @@ nav * {
   font-size: 18px;
   background-color: rgb(255, 255, 255);
   position: relative;
+  z-index: 2;
 }
 
 nav>ul {
@@ -333,6 +365,11 @@ mark {
 
 /* Partie des jeux en général */
 
+.game_name {
+  font-size: 500%;
+  margin-top: -11%;
+}
+
 .playground {
   fill: rgb(12, 80, 12);
 }
@@ -342,7 +379,7 @@ mark {
 }
 
 .svg_playground {
-  margin-top: -3%;
+  margin-top: -2%;
 }
 
 /* Morpion */
@@ -378,27 +415,149 @@ mark {
   cursor: pointer
 }
 
-/* Memory */
-#game-board {
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 300px;
-  margin: 0 auto;
+/* Juste Prix */
+#object_name {
+  font-size: xx-large;
 }
 
-.memory_card {
-  width: 100px;
-  height: 150px;
-  background-color: #f0f0f0;
-  border: 1px solid #ccc;
-  margin: 5px;
-  display: flex;
-  align-items: center;
+.centered_svg {
+  display: inline-block;
   justify-content: center;
-  cursor: pointer;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+
+  vertical-align: top;
+  text-align: center;
+
 }
 
-.memory_card img {
-  max-width: 100px;
-  max-height: 150px;
+.juste_prix-text_above_img {
+  margin-top: -3px;
+  margin-bottom: 3px;
+}
+
+.juste_prix-entrée_utilisateur {
+  bottom: 10%;
+  left: 40%;
+  right: 40%;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.juste_prix-div_entrée {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.juste_prix-instructions {
+  font-size: xx-large;
+  text-anchor: middle;
+
+}
+
+.juste_prix-entrée_utilisateur_validate {
+  bottom: 5%;
+  left: 45%;
+  right: 45%;
+  box-sizing: border-box;
+  position: absolute;
+}
+
+.juste_prix-arrow_up {
+  bottom: 2%;
+  right: 32%;
+  box-sizing: border-box;
+  position: absolute;
+
+  opacity: 50%;
+
+  scale: 20%;
+  transition: 0.25s all ease-in-out;
+}
+
+.juste_prix-arrow_down {
+
+  bottom: 2%;
+  left: 32%;
+  box-sizing: border-box;
+  position: absolute;
+
+  opacity: 50%;
+
+  scale: 20%;
+
+  transform: rotate(180deg);
+
+  transition: 0.15s all ease-in-out;
+}
+
+.juste_prix-score {
+  font-size: xx-large;
+  text-anchor: middle;
+}
+
+/* Memory */
+
+.memory-score {
+  font-size: xx-large;
+}
+
+.memory-playground {
+  aspect-ratio: 1/1;
+}
+
+.memory-img {
+  width: 100%;
+  border-radius: 15px;
+
+}
+
+.memory-img_tableau {
+  aspect-ratio: 1/1;
+  width: 200px;
+  padding-left: 3px;
+  padding-right: 3px;
+
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 200px;
+  aspect-ratio: 1/1;
+
+  perspective: 1000px;
+  /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: scale(1.03)
+}
+
+/* Position the front and back side */
+.flip-box-front,
+.flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+.flip-box-front {
+  transform: rotateY(180deg);
 }

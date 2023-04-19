@@ -16,6 +16,22 @@ function place_nav_bar() {
         navbar.style.bottom = 'auto';
         navbar.style.top = `${imgOffsetTop + imgHeight}px`;
     }
+
+    var url = location.href;
+    var urlFilename = url.substring(url.lastIndexOf('/') + 1);
+
+    if (urlFilename == "index.html"){
+
+        if (scrollTop > imgOffsetTop + imgHeight) {
+            document.getElementById("titre_jeux").style.position = 'fixed';
+            document.getElementById("titre_jeux").style.top = `${navbar.offsetHeight}px`
+
+        } else {
+            document.getElementById("titre_jeux").style.position = 'absolute';
+            document.getElementById("titre_jeux").style.top = `${navbar.offsetHeight + imgOffsetTop + imgHeight}px`
+
+        }
+    }
 }
 
 window.addEventListener('scroll', function () {
@@ -34,10 +50,10 @@ window.addEventListener('load', function () {
     const imgHeight = img.offsetHeight;
     const imgOffsetTop = img.offsetTop;
     const container = document.querySelector('.container');
-    container.style.marginTop = `${(imgOffsetTop + imgHeight)/100 + 17 }%`;
+    container.style.marginTop = `${(imgOffsetTop + imgHeight) / 100 + 17}%`;
 
-    
-    let titre_x = imgHeight/10;
+
+    let titre_x = imgHeight / 10;
     const titre = document.querySelector('h1')
 
     titre.style.setProperty('--titre_place', `${titre_x}px`)

@@ -1,0 +1,15 @@
+finir footer/description des jeux
+
+finir page accueil avec affichage les jeux
+  
+faire images des jeux
+
+actualiser tte les navbars et footers
+
+faire les catégories
+
+//Memory -> finir le jeu (check cartes retournés si bonne ou pas)
+
+//Juste Prix -> Gagner, confettis ?
+
+// Tous les jeux -> confettis quand win si possible

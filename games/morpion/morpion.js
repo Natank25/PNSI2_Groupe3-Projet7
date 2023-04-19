@@ -89,7 +89,7 @@ function draw_cross(elem) {
     line1.setAttribute("y1", y)
     line1.setAttribute("x2", x + 80)
     line1.setAttribute("y2", y + 80)
-    line1.setAttribute("stroke", 'black')
+    line1.setAttribute("stroke", 'red')
     line1.setAttribute("stroke-width", "10");
     line1.setAttribute("stroke-linecap", "round");
     line1.setAttribute("class", "shape")
@@ -100,7 +100,7 @@ function draw_cross(elem) {
     line2.setAttribute("y1", y)
     line2.setAttribute("x2", x)
     line2.setAttribute("y2", y + 80)
-    line2.setAttribute("stroke", 'black')
+    line2.setAttribute("stroke", 'red')
     line2.setAttribute("stroke-width", "10");
     line2.setAttribute("stroke-linecap", "round");
     line2.setAttribute("class", "shape")
@@ -116,7 +116,7 @@ function draw_circle(elem) {
     circle.setAttribute("cy", y + 50)
     circle.setAttribute("r", 40)
     circle.setAttribute("fill", "rgb(8, 92, 8)")
-    circle.setAttribute("stroke", 'black')
+    circle.setAttribute("stroke", 'blue')
     circle.setAttribute("stroke-width", "10");
     circle.setAttribute("class", "shape")
     svg.appendChild(circle);

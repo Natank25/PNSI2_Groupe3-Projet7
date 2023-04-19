@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../../icon.png">
+    <title>Jeux gratuits - Memory</title>
+    <link href="../../style.css" rel="stylesheet">
+    <script src="memory.js"></script>
+    <script src="../../script.js"></script>
+</head>
+
+<body>
+    <div class="top_panel">
+        <div class="img_nav_conatiner">
+            <img src="../../palmiers.jpg" class="img_titre">
+            <nav class="navbar">
+                <ul>
+                    <li class="menu-deroulant">
+                        <a>Jeux Principaux</a>
+                        <ul class="sous-menu">
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                            <li><a href=""></a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-deroulant">
+                        <a>Categories</a>
+                        <ul class="sous-menu">
+                            <li><a href="">peut etre ok</a></li>
+                            <li><a href="">pas ok</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-deroulant">
+                        <a>Jeux du moment</a>
+                        <ul class="sous-menu">
+                            <li><a href="../../games/morpion/morpion.html">Morpion</a></li>
+                            <li><a href="../../games/fast_clicker/fast_clicker.html">Fast clicker</a></li>
+                        </ul>
+                    </li>
+                    <li class="menu-deroulant">
+                        <a>Divers</a>
+                        <ul class="sous-menu">
+                            <li><a href="../../remerciements.html">Remerciements</a></li>
+                            <li><a href="../../credits.html">Credits</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="txt_title">
+            <h1 id="text_titre"><a href="../../index.html">Jeux gratuits</a></h1>
+        </div>
+    </div>
+
+    <div class="container">
+        <h2 class="game_name">Memory</h2>
+
+        <svg width="50%" class="svg_playground memory-playground">
+            <rect width="100%" height="100%" rx="20" ry="20" class="playground"></rect>
+            <rect width="95%" height="90%" y="25" x="25" rx="20" ry="20" class="main_game" stroke="#004000"
+                stroke-width="4"></rect>
+            <foreignObject width="95%" height="90%" x="50" y="29">
+
+                <table class="memory-table">
+                    <tr>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_1_1" onclick="reveal_1_1()">
+                                <div class="flip-box-inner" id="flip-box-inner1_1">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-1_1">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_1_2" onclick="reveal_1_2()">
+                                <div class="flip-box-inner" id="flip-box-inner_1_2">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-1_2">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_1_3" onclick="reveal_1_3()">
+                                <div class="flip-box-inner" id="flip-box-inner_1_3">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-1_3">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_1_4" onclick="reveal_1_4()">
+                                <div class="flip-box-inner" id="flip-box-inner_1_4">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-1_4">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_2_1" onclick="reveal_2_1()">
+                                <div class="flip-box-inner" id="flip-box-inner_2_1">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-2_1">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_2_2" onclick="reveal_2_2()">
+                                <div class="flip-box-inner" id="flip-box-inner_2_2">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-2_2">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_2_3" onclick="reveal_2_3()">
+                                <div class="flip-box-inner" id="flip-box-inner_2_3">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-2_3">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_2_4" onclick="reveal_2_4()">
+                                <div class="flip-box-inner" id="flip-box-inner_2_4">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-2_4">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_3_1" onclick="reveal_3_1()">
+                                <div class="flip-box-inner" id="flip-box-inner_3_1">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-3_1">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_3_2" onclick="reveal_3_2()">
+                                <div class="flip-box-inner" id="flip-box-inner_3_2">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-3_2">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_3_3" onclick="reveal_3_3()">
+                                <div class="flip-box-inner" id="flip-box-inner_3_3">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-3_3">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_3_4" onclick="reveal_3_4()">
+                                <div class="flip-box-inner" id="flip-box-inner_3_4">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-3_4">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_4_1" onclick="reveal_4_1()">
+                                <div class="flip-box-inner" id="flip-box-inner_4_1">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-4_1">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_4_2" onclick="reveal_4_2()">
+                                <div class="flip-box-inner" id="flip-box-inner_4_2">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-4_2">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_4_3" onclick="reveal_4_3()">
+                                <div class="flip-box-inner" id="flip-box-inner_4_3">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-4_3">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                        <td class="memory-img_tableau">
+                            <div class="flip-box" id="flip-box_4_4" onclick="reveal_4_4()">
+                                <div class="flip-box-inner" id="flip-box-inner_4_4">
+                                    <div class="flip-box-front">
+                                        <img class="memory-img" id="memory-4_4">
+                                    </div>
+                                    <div class="flip-box-back">
+                                        <img src="img/back.png" class="memory-img">
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+
+                    </tr>
+                </table>
+
+            </foreignObject>
+
+
+            <text class="memory-score" text-anchor="middle" x="50%" y="97%">Votre score : 0</text>
+        </svg>
+    </div>
+
+    <footer>
+        <br>
+        <a class="footer_big_links" href="../index.html">Menu</a>
+        <p class="footers_big_texts">Jeux principaux:<span class="footer_span">Categories:</span><span
+                class="footer_span">Jeux de moment:</span><span class="footer_span">Divers:</span></p>
+        <a class="footer_links" href="../../games/morpion/morpion.html">- Morpion</a><a class="footer_links2-0"
+            href="">- OUIIIIIII</a><a class="footer_links3-0" href="">- NONNNNNN</a><a class="footer_links4-0"
+            href="../../remerciements.html">- Remerciements</a>
+        <br><a class="footer_links" href="../../games/fast_clicker/fast_clicker.html">- Fast clicker</a><a
+            class="footer_links2-1" href="">- NONNNNNN</a><a class="footer_links3-1" href="">- NONNNNNN</a><a
+            class="footer_links4-1" href="../../credits.html">- Credits</a>
+        <br><a class="footer_links" href="">- Le jeu du futur</a>
+        <br><br><a class="footer_big_links" href="https://www.1001jeux.fr">site inspiré par: 1001jeux.fr</a>
+        <br><br>
+    </footer>
+
+</body>
+
+</html>

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="icon.png">
-    <title>Jeux gratuits - Accueil</title>
+    <link rel="icon" href="../../icon.png">
+    <title>Jeux gratuits - Juste Prix</title>
     <link href="../../style.css" rel="stylesheet">
     <script src="juste_prix.js"></script>
     <script src="../../script.js"></script>
@@ -56,13 +56,33 @@
     </div>
 
     <div class="container">
+        <h2 class="game_name">Juste Prix</h2>
 
-        <svg width="450" height="610" class="svg_playground">
-            <foreignObject width="100" height="230" x="50" y="46">
-                <input style="width: 92px;" type="text" value="Prix" />
+        <svg width="50%" height="500" class="svg_playground">
+            <rect width="100%" height="100%" rx="20" ry="20" class="playground"></rect>
+            <rect width="95%" height="70%" y="25" x="25" rx="20" ry="20" class="main_game" stroke="#004000"
+                stroke-width="4"></rect>
+            <foreignObject width="95%" height="70%" y="25" x="25">
+                <figure class="centered_svg">
+                    <figcaption class="juste_prix-text_above_img" id="object_name" text-anchor="middle">
+                        Placeholder Text</figcaption>
+                    <img id="juste_prix-img_below_text" src="" height="80%">
+                </figure>
+
             </foreignObject>
-        </svg>
 
+            <text class="juste_prix-instructions" x="50%" y="82.25%">Entrez votre estimation (ex: 99.99):</text>
+
+            <foreignObject width="100%" height="100%" class="juste_prix-div_entrée">
+                <input class="juste_prix-entrée_utilisateur" type="number" min="0" step="0.01">
+                <input class="juste_prix-entrée_utilisateur_validate" type="submit" onclick="validate()">
+                <img class="juste_prix-arrow_up" src="arrow_up.svg">
+                <img class="juste_prix-arrow_down" src="arrow_down.svg">
+            </foreignObject>
+
+            <text class="juste_prix-score" x="80%" y="90%">Votre score: </text>
+
+        </svg>
     </div>
 
     <footer>
@@ -77,7 +97,8 @@
             class="footer_links2-1" href="">- NONNNNNN</a><a class="footer_links3-1" href="">- NONNNNNN</a><a
             class="footer_links4-1" href="../../credits.html">- Credits</a>
         <br><a class="footer_links" href="">- Le jeu du futur</a>
-        <br><br><br>
+        <br><br><a class = "footer_big_links" href="https://www.1001jeux.fr">site inspiré par: 1001jeux.fr</a>
+        <br><br>
     </footer>
 
 </body>
