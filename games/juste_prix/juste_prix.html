@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../../icon.png">
     <title>Jeux gratuits - Juste Prix</title>
     <link href="../../style.css" rel="stylesheet">
@@ -21,23 +21,24 @@
                     <li class="menu-deroulant">
                         <a>Jeux Principaux</a>
                         <ul class="sous-menu">
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="../../games/juste_prix/juste_prix.html">Le Juste Prix</a></li>
+                            <li><a href="../../games/memory/memory.html">Memory</a></li>
+                            <li><a href="../../games/morpion/morpion.html">Morpion</a></li>
                         </ul>
                     </li>
                     <li class="menu-deroulant">
                         <a>Categories</a>
                         <ul class="sous-menu">
-                            <li><a href="">peut etre ok</a></li>
-                            <li><a href="">pas ok</a></li>
+                            <li><a href="../../memory_category.html">Mémoire</a></li>
+                            <li><a href="../../logic_category.html">Logique</a></li>
+                            <li><a href="../../chance_category.html">Chance</a></li>
                         </ul>
                     </li>
                     <li class="menu-deroulant">
                         <a>Jeux du moment</a>
                         <ul class="sous-menu">
                             <li><a href="../../games/morpion/morpion.html">Morpion</a></li>
-                            <li><a href="../../games/fast_clicker/fast_clicker.html">Fast clicker</a></li>
+                            <li><a href="../../games/juste_prix/juste_prix.html">Le Juste Prix</a></li>
                         </ul>
                     </li>
                     <li class="menu-deroulant">
@@ -85,20 +86,28 @@
         </svg>
     </div>
 
+    <canvas class="confetti" id="canvas"></canvas>
+
+    <script src="../confettis.js"></script>
+
     <footer>
         <br>
-        <a class="footer_big_links" href="../index.html">Menu</a>
+        <p class="footers_texts">Il vous sera présenté un objet, votre but? En deviner le prix, le jeu vous dira si
+            c'est plus ou moins avec les flèches</p>
+        <a class="footer_big_links" href="../../index.html">Menu</a>
         <p class="footers_big_texts">Jeux principaux:<span class="footer_span">Categories:</span><span
-                class="footer_span">Jeux de moment:</span><span class="footer_span">Divers:</span></p>
+                class="footer_span">Jeux du moment:</span><span class="footer_span">Divers:</span></p>
         <a class="footer_links" href="../../games/morpion/morpion.html">- Morpion</a><a class="footer_links2-0"
-            href="">- OUIIIIIII</a><a class="footer_links3-0" href="">- NONNNNNN</a><a class="footer_links4-0"
+            href="../../memory_category.html">- Mémoire</a><a class="footer_links3-0"
+            href="../../games/memory/memory.html">- Memory</a><a class="footer_links4-0"
             href="../../remerciements.html">- Remerciements</a>
-        <br><a class="footer_links" href="../../games/fast_clicker/fast_clicker.html">- Fast clicker</a><a
-            class="footer_links2-1" href="">- NONNNNNN</a><a class="footer_links3-1" href="">- NONNNNNN</a><a
-            class="footer_links4-1" href="../../credits.html">- Credits</a>
-        <br><a class="footer_links" href="">- Le jeu du futur</a>
-        <br><br><a class = "footer_big_links" href="https://www.1001jeux.fr">site inspiré par: 1001jeux.fr</a>
-        <br><br>
+        <br><a class="footer_links" href="../../games/juste_prix/juste_prix.html">- Le juste prix</a><a
+            class="footer_links2-1" href="../../logic_category.html">- Logique</a><a class="footer_links3-1"
+            href="../../games/juste_prix/juste_prix.html">- Le juste prix</a><a class="footer_links4-1"
+            href="../../credits.html">- Credits</a>
+        <br><a class="footer_links" href="../../games/memory/memory.html">- Memory</a><a class="footer_links3-2"
+            href="../../chance_category.html">- Chance</a>
+        <br><br><a class="footer_big_links" href="../../https://www.1001jeux.fr">site inspiré par: 1001jeux.fr</a>
     </footer>
 
 </body>

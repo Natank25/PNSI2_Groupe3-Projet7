@@ -1,4 +1,4 @@
-objets = [["Peugeot 208", 19200.00], ["Télévision 4k Samsung", 559.00], ["Mascara à picots noirs", 22.90], ["Fajitas", 4.99], ["Schokobons", 7.79], ["Quad éléctrique", 113.83]]
+objets = [["Plante d'intérieur", 39.50], ["Haut parleur bluetooth portable", 990.00], ["Ensemble de couteaux de cuisine", 168.80], ["Tapis de yoga", 26.90], ["Peugeot 208", 19200.00], ["Télévision 4k Samsung", 559.00], ["Mascara à picots noirs", 22.90], ["Fajitas", 4.99], ["Schokobons", 7.79], ["Quad éléctrique", 113.83]]
 
 let objet_rnd;
 let image_src;
@@ -83,6 +83,10 @@ function validate() {
       score += 1
       user_score.innerHTML = "Votre score: " + score
       start_game()
+
+      // Confettis
+      initConfetti();
+      render();
 
    }
 

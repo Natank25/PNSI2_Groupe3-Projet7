@@ -2,6 +2,16 @@ let images = ["img/bananes.png", "img/bananes.png", "img/cerises.png", "img/ceri
 
 let cartes;
 
+let first_card;
+let second_card;
+
+let hasFlippedCard = false;
+let isImageProcessing = false;
+
+let winCounter = 0;
+
+let score = 0;
+
 function start() {
   images = shuffleArray(images)
 
@@ -36,70 +46,74 @@ window.onload = (event) => {
   start()
 }
 
-function reveal_1_1() {
-  flip_card("1_1")
+function reveal(carte) {
+  flip_card(carte)
+  check_card(carte)
 }
 
-function reveal_1_2() {
-  flip_card("1_2")
-}
-
-function reveal_1_3() {
-  flip_card("1_3")
-}
-
-function reveal_1_4() {
-  flip_card("1_4")
-}
-
-function reveal_2_1() {
-  flip_card("2_1")
-}
-
-function reveal_2_2() {
-  flip_card("2_2")
-}
-
-function reveal_2_3() {
-  flip_card("2_3")
-}
-
-function reveal_2_4() {
-  flip_card("2_4")
-}
-
-function reveal_3_1() {
-  flip_card("3_1")
-}
-
-function reveal_3_2() {
-  flip_card("3_2")
-}
-
-function reveal_3_3() {
-  flip_card("3_3")
-}
-
-function reveal_3_4() {
-  flip_card("3_4")
-}
-
-function reveal_4_1() {
-  flip_card("4_1")
-}
-
-function reveal_4_2() {
-  flip_card("4_2")
-}
-
-function reveal_4_3() {
-  flip_card("4_3")
-}
-
-function reveal_4_4() {
-  flip_card("4_4")
-}
 
 function flip_card(carte) {
+  if (isImageProcessing) return;
   document.getElementById(String(`flip-box-inner_${carte}`)).style.transform = "rotateY(180deg)"
+}
+
+function check_card(carte) {
+  if (isImageProcessing) return;
+
+  if (!hasFlippedCard) {
+    first_card = document.getElementById(String(`flip-box-inner_${carte}`))
+    hasFlippedCard = true;
+  } else {
+    isImageProcessing = true;
+
+    second_card = document.getElementById(String(`flip-box-inner_${carte}`))
+
+
+    if (second_card.getElementsByTagName("img")[0].getAttribute("src") == first_card.getElementsByTagName("img")[0].getAttribute("src")) {
+      console.log("WIN")
+      winCounter++
+
+      first_card.parentElement.setAttribute("onclick", "")
+      second_card.parentElement.setAttribute("onclick", "")
+
+      if (winCounter == 8) {
+        setTimeout(() => {
+          for (let x = 1; x < 5; x++) {
+            for (let y = 1; y < 5; y++) {
+              document.getElementById(String(`flip-box-inner_${x}_${y}`)).style.transform = "rotate(0deg)"
+              document.getElementById(String(`flip-box_${x}_${y}`)).setAttribute("onclick", `reveal("${x}_${y}")`)
+            }
+          }
+
+        }, 2500)
+
+        setTimeout(() => {
+          start()
+        }, 3300)
+
+        score++;
+
+        document.querySelector(".memory-score").innerHTML = `Votre score: ${score}`
+
+        // Confettis
+        initConfetti();
+        render();
+      }
+
+      isImageProcessing = false;
+
+    } else {
+      setTimeout(() => {
+        first_card.style.transform = "rotateY(0deg)"
+        second_card.style.transform = "rotateY(0deg)"
+
+        isImageProcessing = false
+      }, 1000)
+    }
+
+    hasFlippedCard = false
+
+  }
+
+
 }

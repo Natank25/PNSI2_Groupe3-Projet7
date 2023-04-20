@@ -20,7 +20,7 @@ function place_nav_bar() {
     var url = location.href;
     var urlFilename = url.substring(url.lastIndexOf('/') + 1);
 
-    if (urlFilename == "index.html"){
+    if (urlFilename == "index.html" || urlFilename == "" || urlFilename == "memory_category.html" || urlFilename == "logic_category.html" || urlFilename == "chance_category.html") {
 
         if (scrollTop > imgOffsetTop + imgHeight) {
             document.getElementById("titre_jeux").style.position = 'fixed';
@@ -32,6 +32,9 @@ function place_nav_bar() {
 
         }
     }
+
+
+
 }
 
 window.addEventListener('scroll', function () {
@@ -74,4 +77,3 @@ window.addEventListener('load', function () {
     });
 
 });
-

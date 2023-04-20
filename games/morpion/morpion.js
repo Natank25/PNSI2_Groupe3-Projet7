@@ -290,6 +290,10 @@ function detect_win() {
             completion_line.setAttribute("class", "shape")
             svg.appendChild(completion_line);
 
+            // Confettis
+            initConfetti();
+            render();
+
             finish()
             swap_player()
         }
